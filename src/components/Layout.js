@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { Typography } from '@material-ui/core'
 
 import { rhythm, scale } from '../utils/typography'
 
@@ -11,13 +12,7 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
+        <Typography variant="h2" gutterBottom>
           <Link
             style={{
               boxShadow: `none`,
@@ -28,7 +23,7 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
-        </h1>
+        </Typography>
       )
     } else {
       header = (
